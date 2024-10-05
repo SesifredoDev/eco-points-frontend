@@ -1,0 +1,7 @@
+{
+  "name": "eco-points-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
