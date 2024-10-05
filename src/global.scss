@@ -35,3 +35,163 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+:root {
+    --background-color: #0d0f0f;
+    --accent-color: #068774;
+    --text-color: #ffffff;
+    --secondary-text-color: #8a8f8f;
+    --border-color: #333;
+    --button-bg-color: #068774;
+    --button-hover-color: rgba(0, 224, 138, 0.689);
+    --card-bg-color: #121414;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* General Ionic styles */
+  ion-content {
+    --background: var(--background-color);
+  }
+  
+  ion-toolbar {
+    --background: var(--accent-color);
+    --color: var(--text-color);
+    --border-color: var(--border-color);
+  }
+  
+  ion-title {
+    color: var(--text-color);
+    font-size: 20px;
+  }
+  
+  ion-buttons {
+    color: var(--accent-color);
+  }
+  
+  ion-button {
+    --background: var(--button-bg-color);
+    --color: var(--text-color);
+    --border-radius: 8px;
+    --box-shadow: none;
+  }
+  
+  ion-button:hover {
+    --background: var(--button-hover-color);
+  }
+  
+//   ion-icon {
+//     color: var(--accent-color);
+//   }
+  
+  /* Floating Action Button (FAB) */
+  ion-fab {
+    --background: var(--accent-color);
+    --color: var(--background-color);
+  }
+  
+  ion-fab-button {
+    --border-radius: 50%;
+    --width: 56px;
+    --height: 56px;
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    --background: var(--accent-color);
+    --color: black;
+  }
+  
+  ion-fab-button:hover {
+    --background: var(--button-hover-color);
+  }
+  
+  /* Cards */
+  ion-card {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  ion-card-header,
+  ion-card-title,
+  ion-card-content {
+    color: var(--text-color);
+  }
+  
+  /* List items (leaderboard and menu) */
+  ion-list {
+    background: transparent;
+    --color: var(--text-color);
+  }
+  
+  ion-item {
+    --background: var(--background-color);
+    --border-color: var(--border-color);
+    --color: var(--text-color);
+  }
+  
+  ion-label {
+    --color: var(--text-color);
+  }
+  
+  ion-input {
+    --color: var(--text-color);
+  }
+  
+  /* Badge / Point Display */
+  ion-badge {
+    --background: var(--accent-color);
+    --color: var(--background-color);
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 5px 10px;
+  }
+  
+  /* Search bar */
+  ion-searchbar {
+    --background: var(--card-bg-color);
+    --color: var(--text-color);
+    --placeholder-color: var(--secondary-text-color);
+    --border-radius: 8px;
+  }
+  
+  /* Leaderboard */
+  ion-list-header {
+    --color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  ion-item-divider {
+    background: var(--card-bg-color);
+    color: var(--accent-color);
+  }
+  
+  ion-note {
+    color: var(--secondary-text-color);
+  }
+  
+  ion-text {
+    color: var(--text-color);
+  }
+  
+  /* QR code container */
+  .qr-container {
+    background: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Miscellaneous styles */
+  .custom-uid-code {
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    background: var(--card-bg-color);
+    border-radius: 8px;
+  }
+  
