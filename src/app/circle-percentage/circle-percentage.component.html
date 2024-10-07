@@ -1,17 +1,10 @@
-<div class="circle-percentage-container">
-  <svg class="circle-percentage" width="120" height="120" viewBox="0 0 120 120">
-    <!-- Background circle -->
-    <circle cx="60" cy="60" r="54" class="circle-background"></circle>
-
-    <!-- Foreground circle for progress -->
-    <circle cx="60" cy="60" r="54" class="circle-progress" 
-            [attr.stroke-dasharray]="circumference"
-            [attr.stroke-dashoffset]="circumference - (progressValue / 100) * circumference"
-            [attr.stroke]="progressColor"></circle>
-  </svg>
-
-  <!-- Text displaying percentage or value -->
-  <div class="percentage-text" [style.color]="progressColor">
-    {{ progressValue }}%
-  </div>
+<div style="width: 150px; height: 150px">
+  <simple-circular-progress
+    hide-label="false"
+    progress-percentage="40"
+    progress-color="#3f51b5"
+    progress-stroke-color="#f1f1f1"
+    label="<strong>40% <br/> New </strong>"
+    label-font-size="1.3rem">
+  </simple-circular-progress>
 </div>

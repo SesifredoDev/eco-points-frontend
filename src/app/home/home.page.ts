@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { IonPullUpFooterState} from 'ionic-pullup';
 import * as L from 'leaflet';
 import { LocationService } from '../shared/services/location/location.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
 selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomePage implements AfterViewInit {
     
     private centroid?: L.LatLngExpression; //
 
-    constructor( private ls: LocationService) {
+    constructor( private ls: LocationService, private toastCtrl: ToastController) {
       this.footerState = IonPullUpFooterState.Collapsed;
 
     }
@@ -30,7 +31,8 @@ export class HomePage implements AfterViewInit {
         });
     
         const tiles = L.tileLayer('https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
-      accessToken: "AmXW5tm4Hyi0EiAB16rJImUAQikEecBfBJvf5b0x3yaoNNEvVkzlGCkULxsteqEi",
+            accessToken: "AmXW5tm4Hyi0EiAB16rJImUAQikEecBfBJvf5b0x3yaoNNEvVkzlGCkULxsteqEi",
+      
         maxZoom: 18,
         minZoom: 3,
         });
@@ -47,8 +49,13 @@ export class HomePage implements AfterViewInit {
     onMapReady() {
         setTimeout(async () => {
 
-            const location = await this.ls.getCurrentCoords()
-            this.centroid = [location.coords.latitude , location.coords.longitude];
+            const location = await this.ls.getCurrentCoords();
+            if(location) this.centroid = [location.coords.latitude , location.coords.longitude];
+            else{
+                this.toastCtrl.create({message: 'Unable to retrieve your current location', duration: 2000}).then(toast => toast.present());
+                this.centroid = [54.5973, 5.9301];
+            }
+
             
       
             // this.map = L.map('map', {
