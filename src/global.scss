@@ -135,7 +135,7 @@
   }
   
   ion-input {
-    --color: var(--text-color);
+    // --color: var(--text-color);
   }
   
   /* Badge / Point Display */
@@ -148,12 +148,12 @@
   }
   
   /* Search bar */
-  ion-searchbar {
-    --background: var(--card-bg-color);
-    --color: var(--text-color);
-    --placeholder-color: var(--secondary-text-color);
-    --border-radius: 8px;
-  }
+  // ion-searchbar {
+  //   --background: var(--card-bg-color);
+  //   --color: var(--text-color);
+  //   --placeholder-color: var(--secondary-text-color);
+  //   --border-radius: 8px;
+  // }
   
   /* Leaderboard */
   ion-list-header {

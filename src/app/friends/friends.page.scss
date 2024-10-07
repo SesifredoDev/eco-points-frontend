@@ -1,0 +1,28 @@
+ion-list{
+    margin: 2.5vh;
+}
+ion-item{
+    --background:white;
+    color: black;
+}
+
+input{
+    background: white !important;
+}
+ion-icon{
+    color: white;
+    --color: white;
+}
+
+.first-place{
+    --background: #E8B904;
+    color: white;
+}
+
+.page-container{
+    
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

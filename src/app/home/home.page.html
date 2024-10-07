@@ -1,19 +1,32 @@
 
 
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Eco-Points
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title>
-        Eco-Points
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+
+
+
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </div>
+
+
+
+  <!-- Fab Menu -->
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button>
+      <ion-fab-button [routerLink]="['/friends']">
         <ion-icon name="people-outline"></ion-icon>
       </ion-fab-button>
       <ion-fab-button>
@@ -31,14 +44,23 @@
         <img class="point-bar"src="assets/drag-bar.svg" alt="" >
 
         <ion-grid>
-          <ion-col>
             <ion-row>
               <ion-item class="point-count">
                 <ion-label slot="start">Total Points</ion-label>
                 <ion-label slot="end">2000</ion-label>
               </ion-item>
             </ion-row>
-          </ion-col>
+            <ion-row>
+              <ion-card></ion-card>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+
+              </ion-col>
+              <ion-col>
+
+              </ion-col>
+            </ion-row>
         </ion-grid>
       </div>
     </ion-content>
