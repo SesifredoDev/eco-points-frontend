@@ -53,9 +53,35 @@
 
             </ion-row>
             <ion-row>
-              <ion-card>
+              <ion-card class="progress-card">
+                <ion-card-header>
+                  <ion-card-title>
+                    Carbon Emissions Avoided
+                  </ion-card-title>
+                </ion-card-header>
                 <ion-card-content>
-                  <app-circle-percentage></app-circle-percentage>
+                  
+                  <ion-progress-bar [value]="0.8" color="success"></ion-progress-bar>
+
+
+                </ion-card-content>
+              </ion-card>
+              <ion-item class=" point-count progress-card">
+                <ion-label slot="start">Money Saved</ion-label>
+                <ion-label slot="end">£25.43</ion-label>
+              </ion-item>
+              <ion-card class="progress-card">
+                <ion-card-header>
+                  <ion-card-title>
+                    Streak
+                  </ion-card-title>
+                  <ion-card-subtitle>38 days</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  
+                  <ion-progress-bar [value]="0.8" color="warning"></ion-progress-bar>
+
+
                 </ion-card-content>
               </ion-card>
             </ion-row>

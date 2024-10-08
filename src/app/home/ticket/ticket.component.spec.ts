@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CirclePercentageComponent } from './circle-percentage.component';
+import { TicketComponent } from './ticket.component';
 
-describe('CirclePercentageComponent', () => {
-  let component: CirclePercentageComponent;
-  let fixture: ComponentFixture<CirclePercentageComponent>;
+describe('TicketComponent', () => {
+  let component: TicketComponent;
+  let fixture: ComponentFixture<TicketComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CirclePercentageComponent ],
+      declarations: [ TicketComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CirclePercentageComponent);
+    fixture = TestBed.createComponent(TicketComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

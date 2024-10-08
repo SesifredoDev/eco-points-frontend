@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { IonicPullupModule } from 'ionic-pullup';
+import { TicketComponent } from './ticket/ticket.component';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { IonicPullupModule } from 'ionic-pullup';
     HomePageRoutingModule,
     IonicPullupModule
   ],
-  declarations: [HomePage],
+  declarations: [HomePage, TicketComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {}
