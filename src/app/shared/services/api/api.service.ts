@@ -36,14 +36,14 @@ export class ApiService {
   }
 
   getBusObservable(){
-    return this.buses;
+    return this.buses.asObservable();
   }
 
   getTrainObservable(){
-    return this.trains;
+    return this.trains.asObservable();
   }
   getBikeObservable(){
-    return this.bike;
+    return this.bike.asObservable();
   }
   
 }
