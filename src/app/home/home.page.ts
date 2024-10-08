@@ -5,6 +5,7 @@ import { LocationService } from '../shared/services/location/location.service';
 import { ModalController, ToastController } from '@ionic/angular';
 import { ApiService } from '../shared/services/api/api.service';
 import { TicketComponent } from './ticket/ticket.component';
+import { Subscription } from 'rxjs';
 
 @Component({
 selector: 'app-home',
@@ -14,7 +15,7 @@ styleUrls: ['home.page.scss']
 export class HomePage implements AfterViewInit {
     footerState: IonPullUpFooterState;
     isDragged: boolean = false;
-    
+    testSub:Subscription;
     private centroid?: L.LatLngExpression; //
 
     constructor( private ls: LocationService, private toastCtrl: ToastController, private apiService: ApiService, private modalCtrl: ModalController) {
@@ -126,12 +127,12 @@ export class HomePage implements AfterViewInit {
 
         this.apiService.getBikeObservable().subscribe(bikes => { 
             bikes.forEach(bike => {
-                L.marker([bike.Latitude, bike.Longitude], bikeIcon).addTo(this.map);
+                L.marker([bike.Longitude, bike.Latitude], bikeIcon).addTo(this.map);
             });
         })
         this.apiService.getTrainObservable().subscribe(trains => {
             trains.forEach(rail => {
-                L.marker([rail.Latitude, rail.Longitude], bikeIcon).addTo(this.map);
+                L.marker([rail.Longitude, rail.Latitude], trainIcon).addTo(this.map)
             });
         })
 
